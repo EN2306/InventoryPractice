@@ -15,3 +15,7 @@
 |------|------|------|
 |Keyboard|$25.50|8|
 |Mouse|$12.90|15|
+
+Future Improvement
+-bullet point 1
+-bullet point 2
