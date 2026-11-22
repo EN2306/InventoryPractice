@@ -25,15 +25,21 @@ def calc_restock_cost(products):
         rc+=(float(item['min_stock'])-float(item['stock']))*float(item['price'])
     return rc
 
+
 def get_most_expensive(products):
-    highest =float(products[0]['price'])
-    e = None
-    if len(products) > 0:
-        for item in products:
-            if float(item['price']) >= highest:
-                highest = float(item['price'])
-                e=item
+    if len(products) == 0:
+        return None
+
+    highest = float(products[0]["price"])
+    e = products[0]
+
+    for item in products:
+        if float(item["price"]) > highest:
+            highest = float(item["price"])
+            e = item
+
     return e
+
 
 
 def format_product(product):
